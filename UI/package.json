@@ -1,0 +1,21 @@
+{
+  "name": "sedwickhackfest",
+  "version": "1.0.0",
+  "description": "Sedwick blockchain hackfest.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "bootstrap": "^4.0.0-beta",
+    "dotenv": "^4.0.0",
+    "express": "latest",
+    "solc": "^0.4.15",
+    "web3": "^0.20.1"
+  },
+  "devDependencies": {}
+}

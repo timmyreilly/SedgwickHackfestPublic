@@ -1,0 +1,31 @@
+{
+    "accounts":[
+        {
+            "accountId":"c95a5012-1710-496b-873f-f3261abaaafc",
+            "type":"claims-manager",
+            "name":"Sedgwick"
+        },
+        {
+            "accountId":"1416c065-f278-4fcb-b951-4b41e5dfef84",
+            "type":"insurer",
+            "name":"Insurer ABC"
+        },
+        {
+            "accountId":"05f9ee4c-455a-4462-873f-85d2b3610ef0",
+            "type":"client",
+            "name":"Client XYZ"
+        },
+        {
+            "accountId":"d3652984-140a-4dbf-8f5e-970ff046aa17",
+            "type":"bank-account",
+            "name":"Insurer Account",
+            "balance":0.0
+        },
+        {
+            "accountId":"1531e4ad-6805-43b0-8952-2cdb12e7c452",
+            "type":"bank-account",
+            "name":"Client Account",
+            "balance":0.0
+        }
+    ]
+}

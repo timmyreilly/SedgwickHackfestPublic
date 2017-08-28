@@ -1,0 +1,17 @@
+{
+  "name": "settlement",
+  "version": "1.0.0",
+  "description": "This is a Truffle project that represents this hackfest's blockchain. You may\r run the usual truffle commands like the following:",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "solc": "^0.4.15"
+  }
+}

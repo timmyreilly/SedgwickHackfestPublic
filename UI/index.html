@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SedgwickHackfest</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/css/fabric.min.css">
+  <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/css/fabric.components.min.css">
+  <script src="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/js/fabric.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="scripts.js" type="text/javascript"></script>
+  <script src="fabric.js" type="text/javascript"></script>
+</head>
+
+<body class="container">
+  <h1 class="ms-font-xxl">Client View</h1>
+  <h2 class="ms-font-l ms-fontColor-themePrimary">Account Balance:
+    <span class="ms-font-l ms-fontColor-neutralPrimary" id="client-account-balance"></span>
+    <span class="ms-font-l ms-fontColor-themePrimary">Deductible Total: </span>
+    <span class="ms-font-l ms-fontColor-neutralPrimary" id="client-deductible-max"></span>
+  </h2>
+  <div class="ms-Grid">
+    <div class="ms-Grid-row">
+
+      <div class="ms-TextField ms-Grid-col ms-sm6">
+        <label class="ms-Label">Add Money</label>
+        <input type="text" id="client-payment" placeholder="USD" class="ms-TextField-field" />
+      </div>
+      <div class="ms-Grid-col ms-sm1"></div>
+      <div class="ms-Grid-col ms-sm3" style="padding-top: 30px;">
+        <button class="ms-Button" id="submit-client-payment">
+                <span class="ms-Button-label">Add</span>
+              </button>
+      </div>
+    </div>
+  </div>
+  <br />
+  <h2 class="ms-font-l ms-fontColor-themePrimary">Client Paid To Date:</h2>
+  <div class="ms-Spinner" id="client-loading" style="padding: 14px">
+    <div class="ms-Spinner-label">
+      Loading...
+    </div>
+  </div>
+  <div id="client-progressbar" style="display: none"></div>
+  <br />
+  <h2 class="ms-font-l ms-fontColor-themePrimary">Total Paid:
+    <span class="ms-font-l ms-fontColor-neutralPrimary" id="client-total"></span>
+  </h2>
+  <hr></hr>
+  <h1 class="ms-font-xxl">Sedgwick View</h1>
+  <div style="display: flex; justify-content: center">
+    <div id="aa" style="width: 45%">
+      <h2 class="ms-font-l ms-fontColor-themePrimary" id="client-payment-title">Client Payment: </h2>
+      <div class="ms-Spinner" id="sw-loading" style="padding: 14px">
+        <div class="ms-Spinner-label">
+          Waiting for Payment...
+        </div>
+      </div>
+      <div id="sw-progressbar" style="display: none"></div>
+    </div>
+    <div id="bb" style="width: 45%">
+      <h2 class="ms-font-l ms-fontColor-themePrimary" id="insurance-payment-title">Insurance Payment: </h2>
+      <div class="ms-Spinner" id="sw-loading-insurer" style="padding: 14px">
+        <div class="ms-Spinner-label">
+          Waiting for Payment...
+        </div>
+      </div>
+      <div id="sw-progressbar-insurer" style="display: none"></div>
+    </div>
+  </div>
+
+  <br />
+  <div class="ms-Grid">
+    <div class="ms-Grid-row">
+
+      <div class="ms-TextField ms-Grid-col ms-sm6">
+        <label class="ms-Label">Make Payment</label>
+        <input type="text" id="payment" placeholder="USD" class="ms-TextField-field" />
+      </div>
+      <div class="ms-Grid-col ms-sm1"></div>
+      <div class="ms-Grid-col ms-sm3" style="padding-top: 30px;">
+        <button class="ms-Button" id="submitPayment">
+              <span class="ms-Button-label">Pay</span>
+            </button>
+      </div>
+    </div>
+  </div>
+  <hr></hr>
+  <h1 class="ms-font-xxl">Insurer View</h1>
+  <h2 class="ms-font-l ms-fontColor-themePrimary">Account Balance:
+    <span class="ms-font-l ms-fontColor-neutralPrimary" id="insurer-account-balance"></span>
+  </h2>
+  <div class="ms-Grid">
+    <div class="ms-Grid-row">
+
+      <div class="ms-TextField ms-Grid-col ms-sm6">
+        <label class="ms-Label">Add Money</label>
+        <input type="text" id="insurer-payment" placeholder="USD" class="ms-TextField-field" />
+      </div>
+      <div class="ms-Grid-col ms-sm1"></div>
+      <div class="ms-Grid-col ms-sm3" style="padding-top: 30px;">
+        <button class="ms-Button" id="submit-insurer-payment">
+                    <span class="ms-Button-label">Add</span>
+                  </button>
+      </div>
+    </div>
+    <br />
+
+</body>
+<script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+
+</html>
