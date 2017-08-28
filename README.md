@@ -99,5 +99,5 @@ Now on your computer + Git CMD.
 This project is licensed under the MIT License
 
 ## URL
-https://github.com/timmyreilly/SedgwickHackfest
+https://github.com/timmyreilly/SedgwickHackfestPublic
 
